@@ -223,7 +223,7 @@ input::-webkit-inner-spin-button {
   position: fixed;
   justify-content: center;
   font-family: 'Handlee', cursive;
-  font-size: 13px;
+  font-size: 15px;
   bottom: 1px;
   gap : 10px;
   user-select: none;
