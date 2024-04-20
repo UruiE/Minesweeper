@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>Minesweeper</title>
+  <script src="https://kit.fontawesome.com/0cc20a372a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="postscript">
+    <a>Credits : Abyy & UruiE</a>
+    <p>|</p>
+    <a href = "https://www.beastphilanthropy.org/donate" target="_blank">Donate here</a>
+    <p>|</p>
+    <a href = "https://en.wikipedia.org/wiki/Minesweeper_(video_game)#Gameplay" target="_blank" > How to play</a>
+  </div>
+  <section>
+    <div id="container">
+      <div id="timer">00</div>
+      <button id="restart">&#8635;</button>
+      <div id="remaining_mines">10</div>
+    </div>
+    <div id="board"></div>
+  </section>
+
+  <div id="form_container"> 
+    <form>
+      <div id="range">
+        <div id=numColInput>
+          <label for="numCols">Collumn</label>
+          <input type="number" min="1" max="20" id="numCols" name="numCols" value="9">
+        </div>
+        <div id=numRowInput>
+          <label for="numRows">Row</label>
+          <input type="number" min="1" max="20" id="numRows" name="numRows" value="9">
+        </div>
+      </div>
+      <div id="mine">
+        <label for="mine">Mine</label>
+        <input type="number" min="1" max="calc(var(--numRows) * var(--numRows) / 2)" id="numMines" name="mine"
+          value="10">
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

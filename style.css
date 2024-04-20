@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&display=swap");
+@import url("menu.css");
+
+@font-face {
+  font-family: 'Handlee';
+  src: url('Fonts/Handlee/Handlee-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-size: normal;
+}
+/*Font Import URL*/
+:root {
+  --bg-2: #6db5f4;
+  --bg-3: #caf1ff;
+  --accent: #5f8bd3;
+  --border: #c9ccd5;
+  --border-2: #b5bac9;
+  --white: white;
+  --black: black;
+  --trans: transparent;
+  --numCols: 9;
+  --numRows: 9;
+}
+
+/*important shit*/
+*,
+*::before,
+*::after {
+  font-family: "Barlow Condensed", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body,
+html {
+  height: 100vh;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*Body*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/*Game workspace*/
+section:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(var(--numCols), 60px);
+  grid-template-rows: repeat(var(--numRows), 60px);
+  border: 1.75px solid var(--black);
+  margin: 20px auto;
+}
+
+.cell {
+  color: --black;
+  font-size: 2em;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("Assets/Cell/unrevealed.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  gap: 1px;
+  user-select: none;
+}
+
+.cell img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  user-select: none;
+}
+
+/*Input*/
+#form_container {
+  border: 3px solid var(--black);
+  display: flex;
+  position: fixed;
+  top: 50px;
+  left: 30px;
+  padding: 15px;
+  font-size: 19px;
+  user-select: none;
+}
+
+#range {
+  display: flex;
+  gap: 0px;
+}
+#numColInput{
+  margin-right: 7px;
+}
+
+#numRowInput{
+  margin-left: 7px;
+}
+label {
+  margin-bottom: 5px;
+  margin-right: 5px; /* Adjust this value for spacing between label and input */
+}
+input[type="number"] {
+  text-align: center;
+  width: 26px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#mine{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*Count*/
+
+#container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  font-weight: bold;
+  user-select: none;
+}
+
+#remaining_mines {
+  width: 10px;
+}
+
+#timer {
+  width: 10px;
+}
+
+#restart {
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+/*Buttons*/
+#restart {
+  font-size: 36px;
+  width: 46px; 
+  height: 46px; 
+  padding: 13px 13px;
+  color: var(--white);
+  background-color: var(--black);
+  border: 4px solid var(--black);
+  cursor: pointer;
+  margin-top: 1px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#restart:hover {
+  background-color: var(--white);
+  color: var(--black)
+    /*background-image: url("Assets/Button/Restart_rover.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;*/
+}
+
+.flag {
+  background-image: url("Assets/Cell/flag.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mine {
+  background-image: url("Assets/Cell/mine.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.revealed {
+  background-image: url("Assets/Cell/revealed.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+ 
+/*postCript*/
+.postscript{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  font-family: 'Handlee', cursive;
+  font-size: 13px;
+  bottom: 1px;
+  gap : 10px;
+  user-select: none;
+  transition: none;
+  text-decoration: none;
+  color: black;
+}
+a{
+  color: black;
+  text-decoration: none;
+}

@@ -1,0 +1,54 @@
+@media only screen and (max-width: 600px) {
+    body {
+        /* Adjustments for small screens */
+        font-size: 16px;
+    }
+
+    section:nth-of-type(1) {
+        margin-top: 20px;
+    }
+
+    #board {
+        display: grid;
+        grid-template-columns: repeat(var(--numCols), 20px);
+        grid-template-rows: repeat(var(--numRows), 20px);
+        margin: 10px auto;
+    }
+
+    .cell {
+        width: 20px;
+        height: 20px;
+        font-size: 1.5em;
+    }
+
+    #form_container {
+        top: 20px;
+        left: 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #restart {
+        font-size: 24px;
+        width: 36px;
+        height: 36px;
+        padding: 10px 10px;
+    }
+
+    #container {
+        font-size: 20px;
+    }
+
+    #remaining_mines,
+    #timer {
+        width: auto;
+    }
+}
+
+body {
+    touch-action: manipulation;
+}
+
+.cell {
+    touch-action: manipulation;
+}
